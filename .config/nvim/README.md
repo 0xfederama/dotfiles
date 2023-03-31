@@ -1,6 +1,6 @@
 # nvim-setup
 
-** Update 2023/03/31 **: moved everything to [lazy.nvim](https://github.com/folke/lazy.nvim). Everything works but the directory structure changed a lot.
+**Update 2023/03/31**: moved everything to [lazy.nvim](https://github.com/folke/lazy.nvim). Everything works but the directory structure changed a lot.
 
 This is my nvim setup, made with the help of these resources: 
 - [ThePrimeagen setup](https://github.com/ThePrimeagen/init.lua) and his [video](https://www.youtube.com/watch?v=w7i4amO_zaE)

@@ -114,6 +114,7 @@ alias bup="brew update && brew upgrade && brew cleanup"
 alias ls="exa"
 alias tree="tree -C"
 alias et="et --icons -s size --dirs-first"
+alias icloud="cd $HOME/Library/Mobile\ Documents"
 
 # Path for Go
 export PATH=$HOME/go/bin:$PATH

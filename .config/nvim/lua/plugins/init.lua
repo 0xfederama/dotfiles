@@ -39,6 +39,7 @@ return {
     -- themes
     'navarasu/onedark.nvim', -- Theme inspired by Atom
     'sainnhe/gruvbox-material',
+    { 'rose-pine/neovim', name = 'rose-pine' },
 
     'lukas-reineke/indent-blankline.nvim', -- Add indentation guides even on blank lines
     'numToStr/Comment.nvim',               -- "gc" to comment visual regions/lines

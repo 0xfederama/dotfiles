@@ -40,8 +40,9 @@ vim.opt.incsearch = true
 
 -- Set colorscheme
 vim.opt.termguicolors = true
--- vim.cmd [[colorscheme onedark]]
-vim.cmd [[colorscheme gruvbox-material]]
+-- vim.cmd("colorscheme onedark")
+-- vim.cmd("colorscheme gruvbox-material")
+vim.cmd("colorscheme rose-pine-moon")
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"

@@ -34,6 +34,9 @@ return {
             animation = false,
         },
         version = '^1.0.0', -- optional: only update when a new 1.x version is released
+        config = function()
+            vim.keymap.set('n', 'Q', ':BufferClose<CR>', { noremap = true, silent = true })
+        end
     },
 
     -- themes

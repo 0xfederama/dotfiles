@@ -55,4 +55,6 @@ return {
         dependencies = 'kkharji/sqlite.lua'
     },
 
+    'nvim-treesitter/nvim-treesitter-context',
+
 }

@@ -117,6 +117,10 @@ vim.api.nvim_create_autocmd("BufWinEnter", {
   end,
 })
 
+-- Terminal in insert mode without line numbers
+vim.api.nvim_command("autocmd TermOpen * setlocal nonumber norelativenumber")       -- no numbers
+vim.api.nvim_command("autocmd TermEnter * setlocal signcolumn=no") -- no sign column
+
 require('onedark').setup {
   style = 'darker'
 }

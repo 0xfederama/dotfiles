@@ -46,7 +46,7 @@ return {
                     ["<C-d>"] = cmp.mapping.scroll_docs(-4),
                     ["<C-f>"] = cmp.mapping.scroll_docs(4),
                     ["<C-Space>"] = cmp.mapping.complete(),
-                    ["<Esc>"] = cmp.mapping.close(),
+                    -- ["<Esc>"] = cmp.mapping.close(),
                 }
             })
 

@@ -41,8 +41,8 @@ vim.opt.incsearch = true
 -- Set colorscheme
 vim.opt.termguicolors = true
 -- vim.cmd("colorscheme onedark")
--- vim.cmd("colorscheme gruvbox-material")
-vim.cmd("colorscheme rose-pine-moon")
+vim.cmd("colorscheme gruvbox-material")
+-- vim.cmd("colorscheme rose-pine-moon")
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
@@ -68,7 +68,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz") -- move to next half of file without mov
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv") -- searching for terms keeps cursor/highlight in the middle
 vim.keymap.set("n", "N", "Nzzzv")
-vim.keymap.set("n", "<leader>vs", "<C-w>v<C-w>l", { desc = "[S]plit [V]ertical pane" }); -- open a vertical on the right and switch to it
+vim.keymap.set("n", "<leader>vs", "<C-w>v<C-w>l", { desc = "[S]plit [V]ertical pane" }); -- open a vertical on the right and switch to it (replaced by tmux)
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`

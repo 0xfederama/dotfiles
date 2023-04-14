@@ -27,15 +27,18 @@ return {
     'lewis6991/gitsigns.nvim',
 
     {
-        'romgrk/barbar.nvim',
+        'akinsho/bufferline.nvim',
+        version = "v3.*",
         dependencies = 'nvim-tree/nvim-web-devicons',
-        opts = {
-            -- lazy.nvim can automatically call setup for you. just put your options here:
-            animation = false,
-        },
-        version = '^1.0.0', -- optional: only update when a new 1.x version is released
         config = function()
-            vim.keymap.set('n', 'Q', ':BufferClose<CR>', { noremap = true, silent = true })
+            require("bufferline").setup {
+                options = {
+                    offsets = {
+                        {
+                            filetype = "neo-tree", text = "File Explorer", text_align = "center" }
+                    },
+                },
+            }
         end
     },
 
@@ -44,6 +47,7 @@ return {
     'sainnhe/gruvbox-material',
     { 'rose-pine/neovim', name = 'rose-pine' },
 
+    -- other
     'lukas-reineke/indent-blankline.nvim', -- Add indentation guides even on blank lines
     'numToStr/Comment.nvim',               -- "gc" to comment visual regions/lines
     'm4xshen/autoclose.nvim',              -- auto close brackets

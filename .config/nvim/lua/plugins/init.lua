@@ -26,22 +26,6 @@ return {
 
     'lewis6991/gitsigns.nvim',
 
-    {
-        'akinsho/bufferline.nvim',
-        version = "v3.*",
-        dependencies = 'nvim-tree/nvim-web-devicons',
-        config = function()
-            require("bufferline").setup {
-                options = {
-                    offsets = {
-                        {
-                            filetype = "neo-tree", text = "File Explorer", text_align = "center" }
-                    },
-                },
-            }
-        end
-    },
-
     -- themes
     'navarasu/onedark.nvim', -- Theme inspired by Atom
     'sainnhe/gruvbox-material',

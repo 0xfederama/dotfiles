@@ -42,7 +42,10 @@ return {
                 mapping = {
                     ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
                     ['<S-Tab>'] = cmp.mapping.select_prev_item(cmp_select),
-                    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+                    ['<CR>'] = cmp.mapping.confirm({
+                        behavior = cmp.ConfirmBehavior.Replace,
+                        select = false
+                    }),
                     ["<C-d>"] = cmp.mapping.scroll_docs(-4),
                     ["<C-f>"] = cmp.mapping.scroll_docs(4),
                     ["<C-Space>"] = cmp.mapping.complete(),

@@ -2,7 +2,6 @@
 
 echo "Backing up everything..."
 sudo mindot backup .
-echo "Done"
 
 if [ ! -d ".git" ]; then
   echo "This directory is not a Git repository. Aborting."
@@ -19,8 +18,7 @@ case "$answer" in
     git add --all
     read -p "Enter the commit message: " msg
     git commit -m "$msg"
-    # git push
-    echo pushing
+    git push
     ;;
   [nN])
     ;;

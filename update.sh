@@ -10,9 +10,10 @@ fi
 
 sudo cp -r ./nvim ./.config
 sudo rm -rf ./nvim
+brew bundle dump --force
 
 git status
-read -p "Do you want to push everything? [Y/n] " answer
+read -p "Do you want to add and push everything? [Y/n] " answer
 case "$answer" in
     [yY] | [yY][eE][sS] | "")
     git add --all

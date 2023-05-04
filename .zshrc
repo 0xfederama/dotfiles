@@ -72,12 +72,9 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    z
-    # bgnotify
     zsh-autosuggestions
     colored-man-pages
     zsh-syntax-highlighting
-    tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -114,10 +111,7 @@ alias uni="cd $HOME/Desktop/Dropbox/university"
 alias bup="brew update && brew upgrade && brew cleanup"
 alias ls="exa"
 alias tree="tree -C"
-alias et="et --icons -s size --dirs-first"
 alias icloud="cd $HOME/Library/Mobile\ Documents"
-export ZSH_TMUX_AUTOSTART=true
-export ZSH_TMUX_AUTOQUIT=false
 
 # Path for Go
 export PATH=$HOME/go/bin:$PATH
@@ -125,9 +119,10 @@ export PATH=$HOME/go/bin:$PATH
 # Path for brew
 export PATH=/opt/homebrew/bin:$PATH
 
+# iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# To make omz show the pwd
+# make omz show the pwd
 # PROMPT=${PROMPT/\%c/\%~}
 
 # opam configuration
@@ -136,4 +131,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
 alias g="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
 
+# haskell ghcup
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
+

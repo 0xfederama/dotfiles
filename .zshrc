@@ -144,4 +144,7 @@ alias g="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefan
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# robbyrussell theme
+[[ ! -f ~/.p10k-robbyrussell.zsh ]] || source ~/.p10k-robbyrussell.zsh

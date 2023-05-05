@@ -33,10 +33,21 @@ return {
 
     -- other
     'lukas-reineke/indent-blankline.nvim', -- Add indentation guides even on blank lines
-    'numToStr/Comment.nvim',               -- "gc" to comment visual regions/lines
     'm4xshen/autoclose.nvim',              -- auto close brackets
+    {
+        'numToStr/Comment.nvim', -- "gc" to comment visual regions/lines
+        config = function ()
+            require('Comment').setup {
+                -- normal mode
+                toggler = {
+                    line = '<leader>c',
+                    block = '<leader>bc',
+                }
+            }
+        end
+    },
 
-    'stevearc/dressing.nvim',              -- Dressing UI for legendary
+    'stevearc/dressing.nvim', -- Dressing UI for legendary
     {
         'mrjones2014/legendary.nvim',
         -- sqlite is only needed if you want to use frecency sorting

@@ -75,7 +75,7 @@ return {
                 opts.desc = "Prev diagnostic";
                 vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
                 opts.desc = "[C]ode [A]ctions";
-                vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_actions() end, opts)
+                vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
                 opts.desc = "[V]ariable [R]eferences";
                 vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
                 opts.desc = "[V]ariable [R]e[N]ame";

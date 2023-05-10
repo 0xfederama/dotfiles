@@ -42,6 +42,11 @@ return {
                 toggler = {
                     line = '<leader>c',
                     block = '<leader>bc',
+                },
+                -- visual mode
+                opleader = {
+                    line = '<leader>c',
+                    block = '<leader>bc',
                 }
             }
         end

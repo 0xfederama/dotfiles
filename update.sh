@@ -8,8 +8,8 @@ if [ ! -d ".git" ]; then
   exit 1
 fi
 
-sudo cp -r ./nvim ./.config
-sudo rm -rf ./nvim
+sudo cp -rf ./nvim ./starship.toml ./.config
+sudo rm -rf ./nvim ./starship.toml
 brew bundle dump --force
 
 git status

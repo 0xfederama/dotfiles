@@ -1,0 +1,16 @@
+add_newline = false
+
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold red)'
+
+[cmd_duration]
+format = 'in [$duration](bold yellow)'
+
+[directory]
+truncation_length = 2
+truncation_symbol = '…/'
+truncate_to_repo = false
+
+[package]
+disabled = true

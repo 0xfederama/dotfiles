@@ -1,6 +1,5 @@
 #!/bin/sh
 
-echo "Backing up everything..."
 sudo mindot backup .
 
 if [ ! -d ".git" ]; then

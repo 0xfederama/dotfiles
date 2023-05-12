@@ -1,0 +1,8 @@
+ohmyzsh/ohmyzsh path:lib
+
+ohmyzsh/ohmyzsh path:plugins/z
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+
+zsh-users/zsh-autosuggestions
+zdharma-continuum/fast-syntax-highlighting

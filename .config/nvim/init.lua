@@ -39,6 +39,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 -- Set colorscheme
+vim.g.gruvbox_material_transparent_background = 2
 vim.opt.termguicolors = true
 -- vim.cmd("colorscheme onedark")
 vim.cmd("colorscheme gruvbox-material")
@@ -78,7 +79,7 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
--- [[ Highlight on yank ]]
+-- Highlight on yank
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
@@ -109,9 +110,6 @@ require('onedark').setup {
   style = 'darker'
 }
 
--- Enable Comment.nvim
-require('Comment').setup()
-
 -- Setup autoclose.nvim
 require('autoclose').setup()
 
@@ -119,19 +117,7 @@ require('autoclose').setup()
 -- See `:help indent_blankline.txt`
 require('indent_blankline').setup {
   -- char = '┊',
-  show_trailing_blankline_indent = false,
-}
-
--- Gitsigns
--- See `:help gitsigns.txt`
-require('gitsigns').setup {
-  signs = {
-    add = { text = '+' },
-    change = { text = '~' },
-    delete = { text = '_' },
-    topdelete = { text = '‾' },
-    changedelete = { text = '~' },
-  },
+  show_trailing_blankline_indent = true,
 }
 
 -- [[ Configure Harpoon]]
@@ -140,19 +126,6 @@ local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
 vim.keymap.set("n", "<leader>a", mark.add_file, { desc = '[A]dd to harpoon' })
 vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu, { desc = 'Open harpoon switcher' })
-
--- [[ Configure legendary ]]
-require('legendary').setup({})
-vim.keymap.set('n', '<C-p>', ":Legendary<CR>", { desc = "Legendary command [P]alette" })
-
--- [[ Configure Telescope ]]
--- Moved to lua/plugins/telescope.lua
-
--- [[ Configure Treesitter ]]
--- Moved to lua/plugins/treesitter.lua
-
--- [[ Configure LSP ]]
--- Moved to lua/plugins/lsp-cmp.lua
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

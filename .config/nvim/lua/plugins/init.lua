@@ -1,7 +1,7 @@
 return {
 
     {
-        -- Open a prompt for <leader> commands
+        -- open a prompt for <leader> commands
         "folke/which-key.nvim",
         config = function()
             vim.o.timeout = true
@@ -24,19 +24,31 @@ return {
     'theprimeagen/vim-be-good',
     'theprimeagen/harpoon',
 
-    'lewis6991/gitsigns.nvim',
+    {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup {
+                signs = {
+                    add = { text = '+' },
+                    change = { text = '~' },
+                    delete = { text = '_' },
+                    topdelete = { text = '‾' },
+                    changedelete = { text = '~' },
+                },
+            }
+        end
+    },
 
     -- themes
-    'navarasu/onedark.nvim', -- Theme inspired by Atom
+    'navarasu/onedark.nvim',
     'sainnhe/gruvbox-material',
-    { 'rose-pine/neovim', name = 'rose-pine' },
+    'rose-pine/neovim',
 
-    -- other
-    'lukas-reineke/indent-blankline.nvim', -- Add indentation guides even on blank lines
+    'lukas-reineke/indent-blankline.nvim', -- add indentation guides even on blank lines
     'm4xshen/autoclose.nvim',              -- auto close brackets
     {
-        'numToStr/Comment.nvim', -- "gc" to comment visual regions/lines
-        config = function ()
+        'numToStr/Comment.nvim',
+        config = function()
             require('Comment').setup {
                 -- normal mode
                 toggler = {
@@ -52,11 +64,22 @@ return {
         end
     },
 
-    'stevearc/dressing.nvim', -- Dressing UI for legendary
+    'stevearc/dressing.nvim', -- dressing UI for legendary
     {
         'mrjones2014/legendary.nvim',
         -- sqlite is only needed if you want to use frecency sorting
-        dependencies = 'kkharji/sqlite.lua'
+        dependencies = 'kkharji/sqlite.lua',
+        config = function()
+            require('legendary').setup({
+                keymaps = {
+                    {
+                        '<C-p>',
+                        { n = ':Legendary<CR>' },
+                        description = 'Command [P]alette',
+                    },
+                },
+            })
+        end
     },
 
     'nvim-treesitter/nvim-treesitter-context',

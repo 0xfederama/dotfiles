@@ -17,3 +17,6 @@ disabled = true
 
 [ocaml]
 format = 'via [$symbol($version )]($style)'
+
+[golang]
+format = 'via [$symbol($version )](bold blue)'

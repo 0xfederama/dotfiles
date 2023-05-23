@@ -28,6 +28,7 @@ alias bup="brew update && brew upgrade && brew cleanup"
 alias ls="exa"
 alias tree="tree -C"
 alias icloud="cd $HOME/Library/Mobile\ Documents"
+alias gcm="git commit -m"
 
 # path for go
 export PATH=$HOME/go/bin:$PATH

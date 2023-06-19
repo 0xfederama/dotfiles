@@ -20,7 +20,7 @@ setopt histignoredups
 export LANG=en_US.UTF-8
 
 # preferred editor for everything
-export EDITOR='nvim'
+# export EDITOR='nvim'
 
 # aliases
 alias uni="cd $HOME/Desktop/Dropbox/university"
@@ -28,7 +28,10 @@ alias bup="brew update && brew upgrade && brew cleanup"
 alias ls="exa"
 alias tree="tree -C"
 alias icloud="cd $HOME/Library/Mobile\ Documents"
+alias gaa="git add --all"
 alias gcm="git commit -m"
+alias gp="git push"
+alias create-url="echo '[InternetShortcut]\nURL=' > repo.url"
 
 # path for go
 export PATH=$HOME/go/bin:$PATH
@@ -51,3 +54,5 @@ alias g="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefan
 # load starship
 eval "$(starship init zsh)"
 
+# alias to update rio term
+alias rio-update="curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/raphamorim/rio/main/scripts/install.sh | bash"

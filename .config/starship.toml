@@ -16,7 +16,8 @@ truncate_to_repo = false
 disabled = true
 
 [ocaml]
-format = 'via [$symbol($version )]($style)'
+# format = 'via [$symbol($version )]($style)'
+local_switch_indicator = '.'
 
 [golang]
 format = 'via [$symbol($version )](bold blue)'

@@ -84,4 +84,6 @@ return {
 
     'nvim-treesitter/nvim-treesitter-context',
 
+    'ocaml/vim-ocaml',
+    'mg979/vim-visual-multi',
 }

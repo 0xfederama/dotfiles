@@ -41,8 +41,8 @@ vim.opt.incsearch = true
 -- Set colorscheme
 vim.g.gruvbox_material_transparent_background = 2
 vim.opt.termguicolors = true
--- vim.cmd("colorscheme onedark")
-vim.cmd("colorscheme gruvbox-material")
+vim.cmd("colorscheme onedark")
+-- vim.cmd("colorscheme gruvbox-material")
 -- vim.cmd("colorscheme rose-pine-moon")
 
 vim.opt.scrolloff = 8
@@ -105,6 +105,19 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- Terminal in insert mode without line numbers
 vim.api.nvim_command("autocmd TermOpen * setlocal nonumber norelativenumber")       -- no numbers
 vim.api.nvim_command("autocmd TermEnter * setlocal signcolumn=no") -- no sign column
+
+-- Set filetypes for ocaml files
+vim.cmd([[
+augroup filetype_mappings
+  autocmd!
+  autocmd BufNewFile,BufRead,BufEnter *.mly set filetype=menhir
+  autocmd BufNewFile,BufRead,BufEnter *.mly lua vim.diagnostic.disable(0)
+  autocmd BufNewFile,BufRead,BufEnter *.mll set filetype=ocamllex
+  autocmd BufNewFile,BufRead,BufEnter *.mll lua vim.diagnostic.disable(0)
+  autocmd BufNewFile,BufRead,BufEnter *.mli,*.mlip,*.mli.cppo set filetype=ocamlinterface
+  autocmd BufNewFile,BufRead,BufEnter *.ml,.ocamlinit,*.mlt,*.mlp,*.ml.cppo set filetype=ocaml
+augroup END
+]])
 
 require('onedark').setup {
   style = 'darker'

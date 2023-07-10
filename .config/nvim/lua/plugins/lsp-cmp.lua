@@ -53,7 +53,7 @@ return {
                 }
             })
 
-            vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = '[F]ormat current buffer' }) -- format current file
+            vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = '[L]SP [F]ormat current buffer' }) -- format current file
 
             lsp.on_attach(function(_, bufnr)
                 lsp.default_keymaps({
@@ -85,6 +85,10 @@ return {
             end)
 
             require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+
+            -- require('lspconfig').ocamllsp.setup({
+            --     filetypes = { 'ocaml' }
+            -- })
 
             lsp.setup()
         end

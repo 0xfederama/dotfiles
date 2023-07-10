@@ -64,13 +64,13 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Open [P]roject explorer 
 vim.keymap.set("v", "Y", "\"+y", { desc = "[Y]ank to clipboard" })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-vim.keymap.set("n", "J", "mzJ`z") -- use J to append line to end and make the cursor stay at the top
-vim.keymap.set("n", "<C-d>", "<C-d>zz") -- move to next half of file without moving cursor
+vim.keymap.set("n", "J", "mzJ`z")                                                       -- use J to append line to end and make the cursor stay at the top
+vim.keymap.set("n", "<C-d>", "<C-d>zz")                                                 -- move to next half of file without moving cursor
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv") -- searching for terms keeps cursor/highlight in the middle
+vim.keymap.set("n", "n", "nzzzv")                                                       -- searching for terms keeps cursor/highlight in the middle
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<leader>vs", "<C-w>v<C-w>l", { desc = "[S]plit [V]ertical pane" }) -- open a vertical on the right and switch to it (replaced by tmux)
-vim.keymap.set("n", "<leader><Tab>", ":bnext<CR>", { desc = "Next buffer" }) -- go to next buffer
+vim.keymap.set("n", "<leader><Tab>", ":bnext<CR>", { desc = "Next buffer" })            -- go to next buffer
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
@@ -104,8 +104,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- })
 
 -- Terminal in insert mode without line numbers
-vim.api.nvim_command("autocmd TermOpen * setlocal nonumber norelativenumber")       -- no numbers
-vim.api.nvim_command("autocmd TermEnter * setlocal signcolumn=no") -- no sign column
+vim.api.nvim_command("autocmd TermOpen * setlocal nonumber norelativenumber") -- no numbers
+vim.api.nvim_command("autocmd TermEnter * setlocal signcolumn=no")            -- no sign column
 
 -- Set filetypes for ocaml files
 vim.cmd([[
@@ -119,6 +119,30 @@ augroup filetype_mappings
   autocmd BufNewFile,BufRead,BufEnter *.ml,.ocamlinit,*.mlt,*.mlp,*.ml.cppo set filetype=ocaml
 augroup END
 ]])
+
+-- Close tabline with alpha
+-- vim.api.nvim_create_autocmd("User", {
+--     pattern = "AlphaReady",
+--     command = "set showtabline=0 | set laststatus=0",
+-- })
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'AlphaReady',
+  desc = 'disable status, tabline and cmdline for alpha',
+  callback = function()
+    vim.go.laststatus = 0
+    vim.opt.showtabline = 0
+    vim.opt.cmdheight = 0
+  end,
+})
+vim.api.nvim_create_autocmd('BufUnload', {
+  buffer = 0,
+  desc = 'enable status, tabline and cmdline after alpha',
+  callback = function()
+    vim.go.laststatus = 3
+    vim.opt.showtabline = 2
+    vim.opt.cmdheight = 1
+  end,
+})
 
 require('onedark').setup {
   style = 'darker'

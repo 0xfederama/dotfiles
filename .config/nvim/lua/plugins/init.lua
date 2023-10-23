@@ -44,8 +44,20 @@ return {
     'sainnhe/gruvbox-material',
     'rose-pine/neovim',
 
-    'lukas-reineke/indent-blankline.nvim', -- add indentation guides even on blank lines
-    'm4xshen/autoclose.nvim',              -- auto close brackets
+    {
+        'lukas-reineke/indent-blankline.nvim', -- add indentation guides even on blank lines
+        version = "2.20.8",
+        config = function()
+            -- Enable `lukas-reineke/indent-blankline.nvim`
+            -- See `:help indent_blankline.txt`
+            require('indent_blankline').setup {
+                -- char = '┊',
+                show_trailing_blankline_indent = true,
+            }
+        end,
+    },
+
+    'm4xshen/autoclose.nvim', -- auto close brackets
     {
         'numToStr/Comment.nvim',
         config = function()
@@ -86,4 +98,5 @@ return {
 
     'ocaml/vim-ocaml',
     'mg979/vim-visual-multi',
+    'jubnzv/virtual-types.nvim',
 }

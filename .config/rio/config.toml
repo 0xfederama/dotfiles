@@ -1,0 +1,18 @@
+option-as-alt = 'right'
+performance = "High"
+theme = "onehalfdark"
+use-kitty-keyboard-protocol = false
+scroll-multiplier = 1.0
+
+[fonts]
+family = "JetBrainsMonoNL Nerd Font"
+size = 20
+
+[window]
+width = 1200
+height = 800
+mode = "Windowed"
+
+# [navigation]
+# mode = "CollapsedTab"
+# clickable = true

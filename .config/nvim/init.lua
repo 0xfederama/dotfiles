@@ -151,12 +151,6 @@ require('onedark').setup {
 -- Setup autoclose.nvim
 require('autoclose').setup()
 
--- Enable `lukas-reineke/indent-blankline.nvim`
--- See `:help indent_blankline.txt`
-require('indent_blankline').setup {
-  -- char = '┊',
-  show_trailing_blankline_indent = true,
-}
 
 -- [[ Configure Harpoon]]
 require('harpoon').setup({})

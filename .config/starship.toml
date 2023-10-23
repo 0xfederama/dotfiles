@@ -5,12 +5,13 @@ success_symbol = '[➜](bold green)'
 error_symbol = '[➜](bold red)'
 
 [cmd_duration]
-format = 'in [$duration](bold yellow)'
+format = 'took [$duration](bold yellow)'
 
 [directory]
 truncation_length = 3
 # truncation_symbol = '…/'
 truncate_to_repo = false
+format = ' in [$path]($style)[$read_only]($read_only_style) '
 
 [package]
 disabled = true
@@ -21,3 +22,12 @@ local_switch_indicator = '.'
 
 [golang]
 format = 'via [$symbol($version )](bold blue)'
+
+[username]
+format = "[$user@](bold green)"
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "[$hostname](bold green)"
+disabled = false

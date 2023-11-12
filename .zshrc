@@ -32,13 +32,16 @@ alias gaa="git add --all"
 alias gcm="git commit -m"
 alias gp="git push"
 alias create-url="echo '[InternetShortcut]\nURL=' > repo.url"
-alias tmux-enter="tmux attach-session -t 0 || tmux"
+alias tin="tmux attach-session -t 0 || tmux"
 
 # path for go
 export PATH=$HOME/go/bin:$PATH
 
 # path for brew
 export PATH=/opt/homebrew/bin:$PATH
+
+# path for rust
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

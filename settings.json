@@ -1,23 +1,59 @@
 {
+	"apc.activityBar": {
+		"hideSettings": false,
+		"position": "bottom",
+		"size": 28,
+		"itemSize": 28
+	},
+	"apc.electron": {
+		"titleBarStyle": "hiddenInset",
+		"trafficLightPosition": {
+			"x": 12,
+			"y": 10
+		}
+	},
+	"apc.font.family": "GeistMono Nerd Font Propo",
+	"apc.monospace.font.family": "GeistMono Nerd Font Propo",
+	"apc.statusBar": {
+		"fontSize": 12,
+		"height": 28,
+		"position": "editor-bottom"
+	},
+	"apc.stylesheet": {
+		// ".sidebar > .composite": "height: 7px !important",
+		".sidebar .composite .title-label .inline-titlebar-placeholder": "display: none !important",
+		// ".inline-tabs-placeholder": "display: none !important",
+	},
+	"breadcrumbs.enabled": false,
 	"C_Cpp.autocompleteAddParentheses": true,
 	"C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, TabWidth: 4, UseTab: Always, AlignTrailingComments: true, AlignConsecutiveAssignments: AcrossComments, IndentPPDirectives: BeforeHash }",
+	"chat.editor.fontFamily": "GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
+	"debug.console.fontFamily": "GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
+	"editor.accessibilitySupport": "off",
 	"editor.autoClosingBrackets": "beforeWhitespace",
 	"editor.bracketPairColorization.enabled": false,
+	"editor.codeLensFontFamily": "GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
 	"editor.cursorBlinking": "solid",
 	"editor.cursorStyle": "block",
 	"editor.cursorSurroundingLines": 8,
-	"editor.fontFamily": "JetBrainsMono Nerd Font, Monaco",
+	"editor.fontFamily": "GeistMono Nerd Font Propo, JetBrainsMono Nerd Font, Monaco",
 	"editor.fontSize": 14.5,
 	"editor.formatOnSave": true,
 	"editor.guides.bracketPairs": true,
 	"editor.guides.bracketPairsHorizontal": false,
+	"editor.inlayHints.fontFamily": "GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
 	"editor.insertSpaces": false,
 	"editor.lineNumbers": "relative",
 	"editor.matchBrackets": "near",
+	"editor.minimap.enabled": false,
 	"editor.mouseWheelScrollSensitivity": 0.5,
 	"editor.renderControlCharacters": true,
+	"editor.scrollbar.horizontal": "auto",
+	"editor.scrollbar.vertical": "auto",
 	"editor.tabSize": 4,
-	"editor.wordBasedSuggestions": true,
+	"editor.wordBasedSuggestions": "matchingDocuments",
+	"editor.wordWrap": "off",
+	"editor.wrappingIndent": "none",
 	"explorer.confirmDragAndDrop": false,
 	"extensions.experimental.affinity": {
 		"vscodevim.vim": 1
@@ -26,7 +62,7 @@
 	"files.trimTrailingWhitespace": true,
 	"git.autofetch": true,
 	"github.copilot.enable": {
-		"*": true,
+		"*": false,
 		"markdown": false,
 		"plaintext": false,
 		"scminput": false
@@ -35,11 +71,30 @@
 	"go.toolsManagement.autoUpdate": true,
 	"go.useLanguageServer": true,
 	"haskell.manageHLS": "GHCup",
-	"python.defaultInterpreterPath": "python3",
+	"markdown.preview.fontFamily": "GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
+	"notebook.output.fontFamily": "GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
+	"python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.black-formatter",
+		"editor.tabSize": 4
+	},
 	"scm.defaultViewMode": "tree",
+	"scm.inputFontFamily": "GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
+	"security.workspace.trust.untrustedFiles": "open",
+	"shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
 	"terminal.external.osxExec": "iTerm.app",
 	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, MesloLGS NF, Monaco",
 	"terminal.integrated.fontSize": 14,
+	"window.commandCenter": false,
+	"workbench.colorCustomizations": {
+		"editorError.foreground": "#FFFFFF50",
+		"editorInfo.foreground": "#FFFFFF50",
+		"editorWarning.foreground": "#FFFFFF50"
+	},
+	"workbench.colorTheme": "Rosé Pine",
+	"workbench.editor.empty.hint": "hidden",
+	"workbench.iconTheme": "moxer-icons",
+	"workbench.list.mouseWheelScrollSensitivity": 0.5,
 	"vim.cursorStylePerMode.insert": "line",
 	"vim.cursorStylePerMode.normal": "block",
 	"vim.cursorStylePerMode.replace": "block",
@@ -52,72 +107,143 @@
 	"vim.leader": "<space>",
 	"vim.normalModeKeyBindings": [
 		{
-			"before": ["[", "d"],
-			"commands": ["editor.action.marker.prev"]
+			"before": [
+				"[",
+				"d"
+			],
+			"commands": [
+				"editor.action.marker.prev"
+			]
 		},
 		{
-			"before": ["]", "d"],
-			"commands": ["editor.action.marker.next"]
+			"before": [
+				"]",
+				"d"
+			],
+			"commands": [
+				"editor.action.marker.next"
+			]
 		},
 		{
-			"before": ["<leader>", "/",],
-			"commands": ["actions.find"]
+			"before": [
+				"<leader>",
+				"f"
+			],
+			"commands": [
+				"actions.find"
+			]
 		},
 		{
-			"before": ["<leader>", "c", "a"],
-			"commands": ["editor.action.quickFix"]
+			"before": [
+				"<leader>",
+				"f",
+				"r"
+			],
+			"commands": [
+				"editor.action.startFindReplaceAction"
+			]
 		},
 		{
-			"before": ["<leader>", "f"],
-			"commands": ["workbench.action.quickOpen"]
+			"before": [
+				"<leader>",
+				"c",
+				"a"
+			],
+			"commands": [
+				"editor.action.quickFix"
+			]
 		},
 		{
-			"before": ["<leader>", "f", "d"],
-			"commands": ["editor.action.formatDocument"]
+			"before": [
+				"<leader>",
+				"o"
+			],
+			"commands": [
+				"workbench.action.quickOpen"
+			]
 		},
 		{
-			"before": ["<leader>", "t"],
-			"commands": ["workbench.action.focusAuxiliaryBar"]
+			"before": [
+				"<leader>",
+				"f",
+				"d"
+			],
+			"commands": [
+				"editor.action.formatDocument"
+			]
 		},
 		{
-			"before": ["<leader>", "v", "r", "n"],
-			"commands": ["editor.action.rename"]
+			"before": [
+				"<leader>",
+				"t"
+			],
+			"commands": [
+				"workbench.action.terminal.toggleTerminal"
+			]
 		},
 		{
-			"before": ["g", "d"],
-			"commands": ["editor.action.peekDefinition"]
+			"before": [
+				"<leader>",
+				"v",
+				"r",
+				"n"
+			],
+			"commands": [
+				"editor.action.rename"
+			]
 		},
 		{
-			"before": ["g", "r"],
-			"commands": ["editor.action.referenceSearch.trigger"]
+			"before": [
+				"g",
+				"d"
+			],
+			"commands": [
+				"editor.action.peekDefinition"
+			]
 		},
 		{
-			"before": ["K"],
-			"commands": ["editor.action.showHover"]
+			"before": [
+				"g",
+				"r"
+			],
+			"commands": [
+				"editor.action.referenceSearch.trigger"
+			]
 		},
+		{
+			"before": [
+				"K"
+			],
+			"commands": [
+				"editor.action.showHover"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"<tab>"
+			],
+			"commands": [
+				"workbench.action.nextEditor"
+			]
+		}
 	],
 	"vim.visualModeKeyBindings": [
 		{
-			"before": ["J"],
-			"commands": ["editor.action.moveLinesDownAction"]
+			"before": [
+				"J"
+			],
+			"commands": [
+				"editor.action.moveLinesDownAction"
+			]
 		},
 		{
-			"before": ["K"],
-			"commands": ["editor.action.moveLinesUpAction"]
+			"before": [
+				"K"
+			],
+			"commands": [
+				"editor.action.moveLinesUpAction"
+			]
 		}
 	],
-	"workbench.colorCustomizations": {
-		"editorError.foreground": "#FFFFFF50",
-		"editorInfo.foreground": "#FFFFFF50",
-		"editorWarning.foreground": "#FFFFFF50"
-	},
-	"workbench.colorTheme": "One Dark Pro Mix",
-	"workbench.editor.empty.hint": "hidden",
-	"workbench.iconTheme": "material-icon-theme",
-	"workbench.list.mouseWheelScrollSensitivity": 0.5,
-	"[python]": {
-		"editor.defaultFormatter": "ms-python.black-formatter",
-		"editor.tabSize": 4
-	},
-	"workbench.settings.useSplitJSON": true
 }

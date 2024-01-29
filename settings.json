@@ -39,11 +39,11 @@
 	"editor.fontFamily": "GeistMono Nerd Font Propo, JetBrainsMono Nerd Font, Monaco",
 	"editor.fontSize": 14.5,
 	"editor.formatOnSave": true,
+	"editor.glyphMargin": true,
 	"editor.guides.bracketPairs": true,
 	"editor.guides.bracketPairsHorizontal": false,
 	"editor.inlayHints.fontFamily": "GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
 	"editor.insertSpaces": false,
-	"editor.lineNumbers": "relative",
 	"editor.matchBrackets": "near",
 	"editor.minimap.enabled": false,
 	"editor.mouseWheelScrollSensitivity": 0.5,
@@ -63,8 +63,8 @@
 	"git.autofetch": true,
 	"github.copilot.enable": {
 		"*": false,
-		"markdown": false,
 		"plaintext": false,
+		"markdown": false,
 		"scminput": false
 	},
 	"go.formatTool": "gofmt",
@@ -75,6 +75,7 @@
 	"notebook.output.fontFamily": "GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
 	"python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
 	"[python]": {
+		"editor.insertSpaces": true,
 		"editor.defaultFormatter": "ms-python.black-formatter",
 		"editor.tabSize": 4
 	},
@@ -85,13 +86,12 @@
 	"terminal.external.osxExec": "iTerm.app",
 	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, MesloLGS NF, Monaco",
 	"terminal.integrated.fontSize": 14,
-	"window.commandCenter": false,
 	"workbench.colorCustomizations": {
 		"editorError.foreground": "#FFFFFF50",
 		"editorInfo.foreground": "#FFFFFF50",
 		"editorWarning.foreground": "#FFFFFF50"
 	},
-	"workbench.colorTheme": "Rosé Pine",
+	"workbench.colorTheme": "GitHub Dark Dimmed",
 	"workbench.editor.empty.hint": "hidden",
 	"workbench.iconTheme": "moxer-icons",
 	"workbench.list.mouseWheelScrollSensitivity": 0.5,
@@ -127,6 +127,7 @@
 		{
 			"before": [
 				"<leader>",
+				"f",
 				"f"
 			],
 			"commands": [
@@ -246,4 +247,6 @@
 			]
 		}
 	],
+	"window.commandCenter": false,
+	"redhat.telemetry.enabled": false,
 }

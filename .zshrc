@@ -35,10 +35,10 @@ alias create-url="echo '[InternetShortcut]\nURL=' > repo.url"
 alias tin="tmux attach-session -t 0 || tmux"
 
 # path for go
-export PATH=$HOME/go/bin:$PATH
+export PATH="$GOPATH/bin:$PATH"
 
 # path for brew
-export PATH=/opt/homebrew/bin:$PATH
+export PATH="/opt/homebrew/bin:$PATH"
 
 # path for rust
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -49,16 +49,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # opam configuration
 [[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
-export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
-alias g="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
-
 # haskell ghcup
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
 # load starship
 eval "$(starship init zsh)"
-
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

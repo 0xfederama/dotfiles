@@ -1,11 +1,25 @@
 add_newline = false
 
+format = '''
+[┌](bold grey)$fill
+[│](bold grey) \[$time\] $username[@](green)$hostname$directory$all
+[└─>](bold grey)$character 
+'''
+
+[fill]
+symbol = '─'
+style = 'bold grey'
+
 [character]
+disabled = true
 success_symbol = '[➜](bold green)'
 error_symbol = '[➜](bold red)'
 
+[line_break]
+disabled = true
+
 [cmd_duration]
-format = 'took [$duration](bold yellow)'
+format = 'took [$duration](yellow)'
 
 [directory]
 truncation_length = 3
@@ -24,10 +38,16 @@ local_switch_indicator = '.'
 format = 'via [$symbol($version )](bold blue)'
 
 [username]
-format = "[$user@](bold green)"
+# format = "[$user@](green)"
+format = "[fede](green)"
 show_always = true
 
 [hostname]
 ssh_only = false
-format = "[$hostname](bold green)"
+format = "[$hostname](green)"
+disabled = false
+
+[time]
+format = '[$time](yellow)'
+time_format = '%H:%M'
 disabled = false

@@ -23,7 +23,7 @@ export LANG=en_US.UTF-8
 # export EDITOR='nvim'
 
 # aliases
-alias uni="cd $HOME/Desktop/Dropbox/university"
+alias uni="cd $HOME/Dropbox/university"
 alias bup="brew update && brew upgrade && brew cleanup"
 alias ls="eza"
 alias tree="tree -C"

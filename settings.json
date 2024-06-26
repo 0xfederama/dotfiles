@@ -3,7 +3,7 @@
 		"hideSettings": false,
 		"position": "bottom",
 		"size": 28,
-		"itemSize": 28
+		"itemSize": 28,
 	},
 	"apc.electron": {
 		"titleBarStyle": "hiddenInset",
@@ -12,17 +12,21 @@
 			"y": 10
 		}
 	},
-	"apc.font.family": "GeistMono Nerd Font Propo",
-	"apc.monospace.font.family": "GeistMono Nerd Font Propo",
+	"apc.font.family": "iA Writer Quattro V",
+	"apc.monospace.font.family": "iA Writer Quattro V",
 	"apc.statusBar": {
 		"fontSize": 12,
 		"height": 28,
 		"position": "editor-bottom"
 	},
+	"apc.listRow": {
+		"fontSize": 13.5,
+		"height": 24,
+	},
 	"apc.stylesheet": {
 		// ".sidebar > .composite": "height: 7px !important",
 		".sidebar .composite .title-label .inline-titlebar-placeholder": "display: none !important",
-		// ".inline-tabs-placeholder": "display: none !important",
+		".inline-tabs-placeholder": "display: none !important",
 	},
 	"breadcrumbs.enabled": false,
 	"C_Cpp.autocompleteAddParentheses": true,
@@ -31,12 +35,11 @@
 	"debug.console.fontFamily": "iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
 	"editor.accessibilitySupport": "off",
 	"editor.autoClosingBrackets": "beforeWhitespace",
-	"editor.bracketPairColorization.enabled": false,
 	"editor.codeLensFontFamily": "iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
 	"editor.cursorBlinking": "solid",
 	"editor.cursorStyle": "block",
 	"editor.cursorSurroundingLines": 8,
-	"editor.fontFamily": "iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font, Monaco",
+	"editor.fontFamily": "JetBrainsMonoNL Nerd Font, iA Writer Mono V, GeistMono Nerd Font Propo, Monaco",
 	"editor.fontSize": 14.5,
 	"editor.formatOnSave": true,
 	"editor.glyphMargin": true,
@@ -59,10 +62,19 @@
 		"vscodevim.vim": 1
 	},
 	"files.autoSave": "afterDelay",
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true,
+		"**/venv": true,
+	},
 	"files.trimTrailingWhitespace": true,
 	"git.autofetch": true,
 	"github.copilot.enable": {
-		"*": true,
+		"*": false,
 		"plaintext": false,
 		"markdown": false,
 		"scminput": false
@@ -91,15 +103,14 @@
 		"editorInfo.foreground": "#FFFFFF50",
 		"editorWarning.foreground": "#FFFFFF50"
 	},
-	"workbench.colorTheme": "GitHub Dark Dimmed",
+	"workbench.colorTheme": "Monokai Pro (Filter Machine)",
 	"workbench.editor.empty.hint": "hidden",
-	"workbench.iconTheme": "moxer-icons",
 	"workbench.list.mouseWheelScrollSensitivity": 0.5,
 	"vim.cursorStylePerMode.insert": "line",
 	"vim.cursorStylePerMode.normal": "block",
-	"vim.cursorStylePerMode.replace": "block",
-	"vim.cursorStylePerMode.visual": "block",
-	"vim.cursorStylePerMode.visualblock": "block",
+	"vim.cursorStylePerMode.replace": "line",
+	"vim.cursorStylePerMode.visual": "line",
+	"vim.cursorStylePerMode.visualblock": "line",
 	"vim.cursorStylePerMode.visualline": "block",
 	"vim.foldfix": true,
 	"vim.hlsearch": true,
@@ -227,6 +238,15 @@
 			"commands": [
 				"workbench.action.nextEditor"
 			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"<shift+tab>"
+			],
+			"commands": [
+				"workbench.action.previousEditor"
+			]
 		}
 	],
 	"vim.visualModeKeyBindings": [
@@ -245,9 +265,69 @@
 			"commands": [
 				"editor.action.moveLinesUpAction"
 			]
+		},
+		{
+			"before": [
+				"<"
+			],
+			"after": [
+				"<",
+				"g",
+				"v"
+			]
+		},
+		{
+			"before": [
+				">"
+			],
+			"after": [
+				">",
+				"g",
+				"v"
+			]
 		}
 	],
 	"window.commandCenter": false,
 	"redhat.telemetry.enabled": false,
 	"editor.minimap.enabled": false,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"cmake.showOptionsMovedNotification": false,
+	"cmake.pinnedCommands": [
+		"workbench.action.tasks.configureTaskRunner",
+		"workbench.action.tasks.runTask"
+	],
+	"cmake.configureOnOpen": true,
+	"python.analysis.autoImportCompletions": true,
+	"python.analysis.typeCheckingMode": "off",
+	"python.analysis.autoFormatStrings": true,
+	"editor.bracketPairColorization.enabled": false,
+	"scm.diffDecorations": "gutter",
+	"editor.guides.highlightActiveIndentation": "always",
+	"todo-tree.highlights.defaultHighlight": {
+		"background": "#00000000",
+	},
+	"gitlens.codeLens.enabled": false,
+	"gitlens.currentLine.enabled": false,
+	"python.analysis.completeFunctionParens": true,
+	"github.copilot.editor.enableAutoCompletions": true,
+	"python.languageServer": "Pylance",
+	"editor.defaultFormatter": "ms-python.black-formatter",
+	"python.analysis.diagnosticSeverityOverrides": {
+		"reportUnusedImport": "warning",
+		"reportUnusedClass": "warning",
+		"reportUnusedVariable": "warning",
+		"reportUnusedFunction": "warning",
+		"reportUnusedExpression": "warning",
+	},
+	"editor.lineHeight": 1.6,
+	"[cpp]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	},
+	"[csv]": {
+		"editor.wordWrap": "on"
+	},
+	"terminal.integrated.enableVisualBell": true,
+	"accessibility.signals.terminalBell": {
+		"sound": "on"
+	},
 }

@@ -1,10 +1,14 @@
 add_newline = false
 
-format = '''
-[┌](bold grey)$fill
-[│](bold grey) \[$time\] $username[@](green)$hostname$directory$all
-[└─>](bold grey)$character 
-'''
+# format = '''
+# [┌](bold grey)$fill
+# [│](bold grey) \[$time\] $username[@](green)$hostname$directory$all
+# [└─>](bold grey)$character 
+# '''
+format = '[\[$directory\]](bold #b35303) '
+
+# reduce command timeout for larger repos and directories
+command_timeout	= 100
 
 [fill]
 symbol = '─'
@@ -22,10 +26,12 @@ disabled = true
 format = 'took [$duration](yellow)'
 
 [directory]
-truncation_length = 3
+# truncation_length = 3
+truncation_length = 100
 # truncation_symbol = '…/'
 truncate_to_repo = false
-format = ' in [$path]($style)[$read_only]($read_only_style) '
+# format = ' in [$path]($style)[$read_only]($read_only_style) '
+format = '[$path](bold #b35303)'
 
 [package]
 disabled = true

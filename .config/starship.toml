@@ -5,7 +5,7 @@ add_newline = false
 # [│](bold grey) \[$time\] $username[@](green)$hostname$directory$all
 # [└─>](bold grey)$character 
 # '''
-format = '[\[$directory\]](bold #b35303) '
+format = '[\[$username@$hostname:$directory\]](bold #FFB26F) $all'
 
 # reduce command timeout for larger repos and directories
 command_timeout	= 100
@@ -24,6 +24,7 @@ disabled = true
 
 [cmd_duration]
 format = 'took [$duration](yellow)'
+disabled = true
 
 [directory]
 # truncation_length = 3
@@ -31,7 +32,7 @@ truncation_length = 100
 # truncation_symbol = '…/'
 truncate_to_repo = false
 # format = ' in [$path]($style)[$read_only]($read_only_style) '
-format = '[$path](bold #b35303)'
+format = '[$path](bold #FFB26F)'
 
 [package]
 disabled = true
@@ -45,15 +46,18 @@ format = 'via [$symbol($version )](bold blue)'
 
 [username]
 # format = "[$user@](green)"
-format = "[fede](green)"
+# format = "[fede](green)"
+format = "$user"
 show_always = true
+# disabled = true
 
 [hostname]
 ssh_only = false
-format = "[$hostname](green)"
-disabled = false
+format = "$hostname"
+# format = "[$hostname](green)"
+# disabled = true
 
 [time]
 format = '[$time](yellow)'
 time_format = '%H:%M'
-disabled = false
+disabled = true

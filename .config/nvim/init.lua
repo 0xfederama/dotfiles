@@ -41,9 +41,10 @@ vim.opt.incsearch = true
 -- Set colorscheme
 vim.g.gruvbox_material_transparent_background = 2
 vim.opt.termguicolors = true
-vim.cmd("colorscheme onedark")
+-- vim.cmd("colorscheme onedark")
 -- vim.cmd("colorscheme gruvbox-material")
 -- vim.cmd("colorscheme rose-pine-moon")
+vim.cmd("colorscheme nord")
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"

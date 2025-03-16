@@ -1,51 +1,54 @@
 {
-	"apc.activityBar": {
-		"hideSettings": false,
-		"position": "bottom",
-		"size": 28,
-		"itemSize": 28,
-	},
-	"apc.electron": {
-		"titleBarStyle": "hiddenInset",
-		"trafficLightPosition": {
-			"x": 12,
-			"y": 10
-		}
-	},
-	"apc.font.family": "iA Writer Quattro V",
-	"apc.monospace.font.family": "iA Writer Quattro V",
-	"apc.statusBar": {
-		"fontSize": 12,
-		"height": 28,
-		"position": "editor-bottom"
-	},
-	"apc.listRow": {
-		"fontSize": 13.5,
-		"height": 24,
-	},
-	"apc.stylesheet": {
-		// ".sidebar > .composite": "height: 7px !important",
-		".sidebar .composite .title-label .inline-titlebar-placeholder": "display: none !important",
-		".inline-tabs-placeholder": "display: none !important",
-	},
-	"breadcrumbs.enabled": false,
+	// "apc.activityBar": {
+	// 	"hideSettings": false,
+	// 	"position": "bottom",
+	// 	"size": 28,
+	// 	"itemSize": 28,
+	// },
+	// "apc.electron": {
+	// 	"titleBarStyle": "hiddenInset",
+	// 	"trafficLightPosition": {
+	// 		"x": 12,
+	// 		"y": 10
+	// 	}
+	// },
+	// "apc.font.family": "iA Writer Quattro V",
+	// "apc.monospace.font.family": "iA Writer Quattro V",
+	// "apc.statusBar": {
+	// 	"fontSize": 12,
+	// 	"height": 28,
+	// 	"position": "editor-bottom"
+	// },
+	// "apc.listRow": {
+	// 	"fontSize": 13.5,
+	// 	"height": 24,
+	// },
+	// "apc.stylesheet": {
+	// 	// ".sidebar > .composite": "height: 7px !important",
+	// 	".sidebar .composite .title-label .inline-titlebar-placeholder": "display: none !important",
+	// 	".inline-tabs-placeholder": "display: none !important",
+	// },
 	"C_Cpp.autocompleteAddParentheses": true,
 	"C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, TabWidth: 4, UseTab: Always, AlignTrailingComments: true, AlignConsecutiveAssignments: AcrossComments, IndentPPDirectives: BeforeHash }",
-	"chat.editor.fontFamily": "iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
-	"debug.console.fontFamily": "iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
+	"chat.editor.fontFamily": "JetBrainsMonoNL Nerd Font, iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
+	"debug.console.fontFamily": "JetBrainsMonoNL Nerd Font, iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
 	"editor.accessibilitySupport": "off",
 	"editor.autoClosingBrackets": "beforeWhitespace",
-	"editor.codeLensFontFamily": "iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
+	"editor.codeLensFontFamily": "JetBrainsMonoNL Nerd Font, iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
 	"editor.cursorBlinking": "solid",
 	"editor.cursorStyle": "block",
 	"editor.cursorSurroundingLines": 8,
-	"editor.fontFamily": "JetBrainsMonoNL Nerd Font, iA Writer Mono V, GeistMono Nerd Font Propo, Monaco",
+	"editor.fontFamily": "JetBrainsMonoNL Nerd Font",
+	// "editor.fontFamily": "Monaspace Neon",
+	// "editor.fontFamily": "iA Writer Mono V",
+	// "editor.fontFamily": "GeistMono Nerd Font Propo",
+	// "editor.fontFamily": "Monaco",
 	"editor.fontSize": 14.5,
 	"editor.formatOnSave": true,
 	"editor.glyphMargin": true,
 	"editor.guides.bracketPairs": true,
 	"editor.guides.bracketPairsHorizontal": false,
-	"editor.inlayHints.fontFamily": "iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
+	"editor.inlayHints.fontFamily": "JetBrainsMonoNL Nerd Font, iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
 	"editor.insertSpaces": false,
 	"editor.lineNumbers": "relative",
 	"editor.matchBrackets": "near",
@@ -74,36 +77,39 @@
 	"files.trimTrailingWhitespace": true,
 	"git.autofetch": true,
 	"github.copilot.enable": {
-		"*": false,
+		"*": true,
 		"plaintext": false,
 		"markdown": false,
-		"scminput": false
+		"scminput": false,
+		"python": false
 	},
 	"go.formatTool": "gofmt",
 	"go.toolsManagement.autoUpdate": true,
 	"go.useLanguageServer": true,
 	"haskell.manageHLS": "GHCup",
-	"markdown.preview.fontFamily": "iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
-	"notebook.output.fontFamily": "iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
+	// "markdown.preview.fontFamily": "iA Writer Quattro V, JetBrainsMonoNL Nerd Font, iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
+	"notebook.output.fontFamily": "JetBrainsMonoNL Nerd Font, iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
 	"python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+	"python.terminal.activateEnvironment": true,
 	"[python]": {
 		"editor.insertSpaces": true,
 		"editor.defaultFormatter": "ms-python.black-formatter",
 		"editor.tabSize": 4
 	},
 	"scm.defaultViewMode": "tree",
-	"scm.inputFontFamily": "iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
+	"scm.inputFontFamily": "JetBrainsMonoNL Nerd Font, iA Writer Mono V, GeistMono Nerd Font Propo, JetBrainsMono Nerd Font",
 	"security.workspace.trust.untrustedFiles": "open",
 	"shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
-	"terminal.external.osxExec": "iTerm.app",
-	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, MesloLGS NF, Monaco",
+	"terminal.external.osxExec": "Ghostty.app",
+	"terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font, MesloLGS NF, Monaco",
 	"terminal.integrated.fontSize": 14,
+	"terminal.integrated.initialHint": false,
 	"workbench.colorCustomizations": {
 		"editorError.foreground": "#FFFFFF50",
 		"editorInfo.foreground": "#FFFFFF50",
 		"editorWarning.foreground": "#FFFFFF50"
 	},
-	"workbench.colorTheme": "Monokai Pro (Filter Machine)",
+	"workbench.colorTheme": "Ayu Mirage Bordered",
 	"workbench.editor.empty.hint": "hidden",
 	"workbench.list.mouseWheelScrollSensitivity": 0.5,
 	"vim.cursorStylePerMode.insert": "line",
@@ -287,7 +293,6 @@
 			]
 		}
 	],
-	"window.commandCenter": false,
 	"redhat.telemetry.enabled": false,
 	"editor.minimap.enabled": false,
 	"diffEditor.ignoreTrimWhitespace": false,
@@ -326,8 +331,18 @@
 	"[csv]": {
 		"editor.wordWrap": "on"
 	},
+	"[markdown]": {
+		"editor.wordWrap": "on"
+	},
 	"terminal.integrated.enableVisualBell": true,
 	"accessibility.signals.terminalBell": {
 		"sound": "on"
 	},
+	"workbench.activityBar.location": "bottom",
+	// "workbench.editor.editorActionsLocation": "hidden",
+	"breadcrumbs.enabled": false,
+	"markdown.preview.scrollEditorWithPreview": false,
+	"markdown.preview.scrollPreviewWithEditor": false,
+	"vsicons.dontShowNewVersionMessage": true,
+	"C_Cpp.default.cppStandard": "c++20",
 }

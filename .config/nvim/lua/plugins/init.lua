@@ -43,6 +43,7 @@ return {
     'navarasu/onedark.nvim',
     'sainnhe/gruvbox-material',
     'rose-pine/neovim',
+    'gbprod/nord.nvim',
 
     {
         'lukas-reineke/indent-blankline.nvim', -- add indentation guides even on blank lines

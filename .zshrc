@@ -26,6 +26,8 @@ export LANG=en_US.UTF-8
 alias uni="cd $HOME/Dropbox/university"
 alias bup="brew update && brew upgrade && brew cleanup"
 alias ls="eza"
+alias la="ls -a"
+alias lh="ls -lh"
 alias tree="tree -C"
 alias icloud="cd $HOME/Library/Mobile\ Documents"
 alias gaa="git add --all"
@@ -33,6 +35,19 @@ alias gcm="git commit -m"
 alias gp="git push"
 alias create-url="echo '[InternetShortcut]\nURL=' > repo.url"
 alias tin="tmux attach-session -t 0 || tmux"
+alias activate="source venv/bin/activate"
+notify_tg() {
+    if [ -z "$1" ]; then
+        echo "Error: No PID provided."
+        echo "Usage: notify_tg <PID>"
+        return 1
+    fi
+    cd ~/Developer/projects/python/notify_pid_telegram
+    source venv/bin/activate
+    eval "nohup python3 notify.py $1 >/dev/null 2>&1 &"
+    deactivate
+    cd - >/dev/null
+}
 
 # path for go
 export PATH="$GOPATH/bin:$PATH"
@@ -56,3 +71,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 eval "$(starship init zsh)"
 
 [[ "$TERM_PROGRAM" == "CodeEditApp_Terminal" ]] && . "/Applications/CodeEdit.app/Contents/Resources/codeedit_shell_integration.zsh"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/federico/.lmstudio/bin"

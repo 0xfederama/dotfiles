@@ -1,0 +1,21 @@
+# font-family = "JetBrainsMonoNL Nerd Font"
+# font-family = "Geist Mono"
+font-family = "BerkeleyMonoTrial Nerd Font"
+adjust-cell-height = 20%
+font-size = 15
+font-feature = -calt, -liga, -dlig
+theme = nord
+
+background-opacity = 0.95
+background-blur = true
+window-colorspace = display-p3
+
+macos-titlebar-style = transparent
+window-width = 162
+window-height = 42
+window-padding-balance = true
+
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+
+keybind = global:cmd+grave_accent=toggle_quick_terminal

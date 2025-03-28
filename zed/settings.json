@@ -1,0 +1,78 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+	"show_edit_predictions": false,
+	"base_keymap": "VSCode",
+	"theme": "One Dark",
+	// "buffer_font_family": "JetBrainsMonoNL Nerd Font",
+	// "buffer_font_family": "Berkeley Mono Trial",
+	"buffer_font_family": "BerkeleyMonoTrial Nerd Font",
+	// "buffer_font_family": "CommitMono",
+	// "buffer_font_family": "SauceCodePro Nerd Font Mono",
+	// "buffer_font_family": "BlexMono Nerd Font",
+	"buffer_font_size": 16,
+	"features": {
+		"copilot": false
+	},
+	"hard_tabs": true,
+	"tab_size": 4,
+	"autosave": "on_focus_change",
+	"toolbar": {
+		"breadcrumbs": true,
+		"quick_actions": true
+	},
+	"buffer_line_height": {
+		"custom": 1.5
+	},
+	"relative_line_numbers": false,
+	"terminal": {
+		"dock": "right",
+		"font_family": "JetBrainsMonoNL Nerd Font",
+		"font_size": 14.5,
+		"alternate_scroll": "on",
+		"line_height": "standard"
+	},
+	"languages": {
+		"Python": {
+			"format_on_save": {
+				"external": {
+					"command": "black",
+					"arguments": ["-"]
+				}
+			}
+		},
+		"Markdown": {
+			"soft_wrap": "editor_width"
+		}
+	},
+	"git": {
+		"inline_blame": {
+			"enabled": false
+		}
+	},
+	"lsp": {
+		"pyright": {
+			"settings": {
+				"python.analysis": {
+					"diagnosticMode": "workspace",
+					"typeCheckingMode": "strict"
+				},
+				"python": {
+					"pythonPath": ".venv/bin/python"
+				}
+			}
+		}
+	},
+	// Vim mode
+	"vim_mode": true,
+	// "cursor_blink": false,
+	"vim": {
+		"use_system_clipboard": "on_yank"
+	}
+}

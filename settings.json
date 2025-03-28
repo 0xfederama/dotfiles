@@ -38,7 +38,8 @@
 	"editor.cursorBlinking": "solid",
 	"editor.cursorStyle": "block",
 	"editor.cursorSurroundingLines": 8,
-	"editor.fontFamily": "JetBrainsMonoNL Nerd Font",
+	"editor.fontFamily": "BerkeleyMonoTrial Nerd Font",
+	// "editor.fontFamily": "JetBrainsMonoNL Nerd Font",
 	// "editor.fontFamily": "Monaspace Neon",
 	// "editor.fontFamily": "iA Writer Mono V",
 	// "editor.fontFamily": "GeistMono Nerd Font Propo",
@@ -77,11 +78,12 @@
 	"files.trimTrailingWhitespace": true,
 	"git.autofetch": true,
 	"github.copilot.enable": {
-		"*": true,
+		"*": false,
 		"plaintext": false,
 		"markdown": false,
 		"scminput": false,
-		"python": false
+		"python": false,
+		"java": false
 	},
 	"go.formatTool": "gofmt",
 	"go.toolsManagement.autoUpdate": true,

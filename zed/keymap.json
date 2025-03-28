@@ -1,0 +1,36 @@
+[
+	{
+		"context": "vim_mode == visual",
+		"bindings": {
+			"shift-k": "editor::MoveLineUp",
+			"shift-j": "editor::MoveLineDown",
+			">": "editor::Indent",
+			"<": "editor::Outdent"
+		}
+	},
+	{
+		"context": "vim_mode == normal",
+		"bindings": {
+			"f d": "editor::Format",
+			"space tab": "pane::ActivateNextItem",
+			"space shift-tab": "pane::ActivatePreviousItem",
+			"space t": "terminal_panel::ToggleFocus",
+			"space o": "file_finder::Toggle"
+		}
+	},
+	{
+		"context": "vim_mode == normal || vim_mode == visual",
+		"bindings": {
+			"c a": "editor::ToggleCodeActions",
+			"c d": "editor::Rename",
+			"f f": "buffer_search::Deploy",
+			"f r": ["buffer_search::Deploy", { "replace_enabled": true }]
+		}
+	},
+	{
+		"context": "Terminal",
+		"bindings": {
+			"alt-tab": "terminal_panel::ToggleFocus"
+		}
+	}
+]

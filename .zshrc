@@ -1,3 +1,8 @@
+# load env variables if the file exists
+if [ -f ~/.zshenv ]; then
+    source ~/.zshenv
+fi
+
 # source antidote
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 # source ${ZDOTDIR:-~}/.antidote/antidote.zsh # for linux

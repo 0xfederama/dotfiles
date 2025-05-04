@@ -27,9 +27,9 @@ format = 'took [$duration](yellow)'
 disabled = true
 
 [directory]
-# truncation_length = 3
-truncation_length = 100
-# truncation_symbol = '…/'
+truncation_length = 2
+truncation_symbol = '…/'
+# truncation_length = 100
 truncate_to_repo = false
 # format = ' in [$path]($style)[$read_only]($read_only_style) '
 format = '[$path](bold #FFB26F)'
